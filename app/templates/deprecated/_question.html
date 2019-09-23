@@ -1,0 +1,14 @@
+<table>
+    <tr valign="top">
+        <td><img src="{{ question.author.avatar(36) }}"></td>
+        <td>
+            <a href="{{ url_for('main.user', username=question.author.username) }}">
+                    {{ question.author.username }}
+                </a>
+                asked {{ moment(question.timestamp).fromNow() }}:
+                <br>
+                <a href="{{ url_for('main.question_detail', question_id=question.id) }}">{{ question.title}}</a><br>
+                {{ question.body }}<br>
+        </td>
+    </tr>
+</table>

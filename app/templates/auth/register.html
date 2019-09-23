@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div id="register"></div>
+{% endblock %}
+{% block scripts %}
+    {{super()}}
+    <script src="{{ url_for('static' , filename='js/auth/Register.js') }}" type="text/babel"></script>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div id="search"></div>
+{% endblock %}
+{% block scripts %}
+    {{ super() }}
+    <script src="{{ url_for('static' , filename='js/base/Search.js')}}" type="text/babel"></script>
+
+{% endblock %}

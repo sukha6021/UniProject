@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    {% if title %}
+	    <title>{{ title }} - Q&A Engine</title>
+	    {% else %}
+	    <title>Welcome to Q&A Engine</title>
+	    {% endif %}
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static' , filename='css/base.css') }}">
+        <!-- react script imports -->
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    </head>
+    <body>
+        
+		<div id="base"></div>
+        {% block content %}
+        {% endblock %}
+
+        {% block scripts %}
+             <script src="{{url_for('static', filename='js/components/UserMessages.js')}}" type="text/babel" ></script>
+             <script src="{{ url_for('static' , filename='js/components/Checkbox.js') }}" type="text/babel"></script>
+            <script src="{{ url_for('static' , filename='js/components/Input.js') }}" type="text/babel"></script>
+            <script src="{{ url_for('static' , filename='js/components/Form.js') }}" type="text/babel"></script>
+            <script src="{{ url_for('static' , filename='js/components/Textarea.js') }}" type="text/babel"></script>
+            <script src="{{ url_for('static' , filename='js/components/Anchor.js') }}" type="text/babel"></script>
+            <script src="{{ url_for('static' , filename='js/components/Question.js') }}" type="text/babel"></script>  
+            {{ moment.include_moment() }}
+        {% endblock %}
+    </body>
+    <!-- variables -->
+    <script type="text/javascript">
+        var frontend_data = {{ frontend_data|safe }};
+        console.log("frontend_data:");
+        console.log(frontend_data);
+        var csrf_token = "{{ csrf_token() }}";
+    </script>
+    <!-- React element imports asdasdasd -->
+    <script src="{{url_for('static', filename='js/base/Base.js')}}" type="text/babel" ></script>
+    <script src="{{url_for('static', filename='js/helpers.js')}}" type="text/babel" ></script>
+</html>

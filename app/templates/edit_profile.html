@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div id="edit_profile"></div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script src="{{ url_for('static' , filename='js/main/EditProfile.js') }}" type="text/babel"></script>
+{% endblock %}

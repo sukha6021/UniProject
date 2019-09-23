@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div id="login"></div> 
+{% endblock %}
+
+{% block scripts %}
+    {{super()}}
+    <script src="{{ url_for('static' , filename='js/components/Checkbox.js') }}" type="text/babel"></script>
+    <script src="{{ url_for('static' , filename='js/components/Input.js') }}" type="text/babel"></script>
+    <script src="{{ url_for('static' , filename='js/components/Form.js') }}" type="text/babel"></script>
+    <script src="{{ url_for('static' , filename='js/components/Anchor.js') }}" type="text/babel"></script>
+    <script src="{{ url_for('static' , filename='js/auth/Login.js') }}" type="text/babel"></script>
+{% endblock %}

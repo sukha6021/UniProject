@@ -1,0 +1,31 @@
+html {
+	
+}
+
+body{
+	margin: 0 10%;
+}
+
+body .input-container , body .checkbox {
+	margin: 10px 0;
+}
+
+body .input-container input{
+	padding-left: 5px;
+	border: none;
+	border-bottom: 1px solid #000000;
+}
+
+body .link {
+	margin: 5px 0;
+}
+
+body .error{
+	background-color:#FF6666;
+	border-left: 2px solid #ff3333;
+	padding-left: 3px;
+}
+
+#login div{
+	background-color:#ffff66;
+}
